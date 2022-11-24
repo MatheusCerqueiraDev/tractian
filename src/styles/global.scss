@@ -1,10 +1,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
 @import "./colors.module.scss";
 
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  @media (max-width: 1080px) {
+    font-size: 93.75%; //15 pixels
+  }
+  @media (max-width: 720px) {
+    font-size: 87.5%; //14 pixels
+  }
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-weight: 400 1rem "Poppins", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 0.4rem;
   height: 0.7rem;
-  background-color: $blue-900;
+  background-color: $blue-600;
 }
 
 ::-webkit-scrollbar-button {

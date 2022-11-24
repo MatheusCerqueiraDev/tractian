@@ -1,0 +1,46 @@
+.trt-motor-details-modal {
+  span {
+    color: #000000;
+  }
+}
+
+.trt-footer-button {
+  span {
+    color: #000000;
+    font-size: 1rem; //16px
+  }
+}
+
+.trt-motor-details-icon {
+  & > svg {
+    font-size: 18px;
+  }
+
+  & path {
+    fill: #000000;
+  }
+}
+
+.trt-chart-wrappers {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.trt-motor-info {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.trt-specifications-icon {
+  & > svg {
+    font-size: 22px;
+  }
+
+  & path {
+    fill: #000000;
+  }
+}

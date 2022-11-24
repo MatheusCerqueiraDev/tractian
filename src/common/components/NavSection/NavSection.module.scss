@@ -1,0 +1,34 @@
+@import "../../../styles/colors.module.scss";
+
+.nav-section-wrapper,
+.nav-children-wrapper {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+}
+
+.nav-section-title {
+  color: $blue-100;
+  font-size: 1.125rem; //18px
+  font-weight: 700;
+  margin-bottom: 12px;
+
+  cursor: default;
+}
+.nav-section-subTitle {
+  color: $gray-300;
+  font-size: 1rem; // 16px
+  font-weight: 600;
+
+  cursor: default;
+}
+
+.trt-separator {
+  background: $blue-100;
+  border-radius: 8px;
+  height: 1px;
+  margin: 16px 0;
+  width: 100%;
+
+  filter: brightness(0.7);
+}

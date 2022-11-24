@@ -1,0 +1,30 @@
+.tag-wrapper {
+  .ant-tag {
+    border-radius: 8px;
+    padding: 0 0.2em;
+  }
+}
+
+.tag-wrapper-small {
+  @extend .tag-wrapper;
+  .ant-tag,
+  .ant-tag * {
+    font-size: 12px;
+  }
+}
+
+.tag-wrapper-default {
+  @extend .tag-wrapper;
+  .ant-tag,
+  .ant-tag * {
+    font-size: 14px;
+  }
+}
+
+.tag-wrapper-large {
+  @extend .tag-wrapper;
+  .ant-tag,
+  .ant-tag * {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,42 @@
+@import "../../styles/colors.module.scss";
+
+.trt-footer-wrapper {
+  background: transparent;
+  padding: 24px 20px 16px;
+  width: 100%;
+}
+
+.trt-social-icons {
+  & > svg {
+    font-size: 40px;
+    vertical-align: bottom;
+  }
+  & path {
+    fill: $white-100;
+  }
+}
+
+.trt-footer-separator {
+  background: $blue-100;
+  border-radius: 8px;
+  height: 1px;
+  margin: 16px 0;
+  width: 100%;
+
+  filter: brightness(0.7);
+}
+
+.trt-footer-columns {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.trt-nav-link {
+  display: flex;
+  align-items: center;
+
+  color: $white-100;
+}

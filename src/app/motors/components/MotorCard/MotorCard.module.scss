@@ -1,0 +1,45 @@
+.trt-motor-switch {
+  display: flex;
+  justify-content: end;
+}
+
+.trt-motor-inner-switch {
+  background-color: #52c41a;
+}
+
+.trt-card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.trt-motor-modal-button:global.ant-btn-link {
+  display: flex;
+  align-items: center;
+
+  & > span {
+    -webkit-text-fill-color: #000000d9;
+  }
+}
+
+.trt-modal-icon {
+  & > svg {
+    font-size: 18px;
+    vertical-align: text-bottom;
+  }
+
+  & path {
+    fill: #000000;
+  }
+}
+
+.trt-motor-active {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  height: 100%;
+  width: 12px;
+
+  transition: 200ms linear all;
+}
