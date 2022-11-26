@@ -1,6 +1,6 @@
 import { CloseOutlined } from "@ant-design/icons";
 import { Modal as AntModal, ModalProps as AntModalProps } from "antd";
-import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { Card } from "../Card/Card";
 import styles from "./Modal.module.scss";
 

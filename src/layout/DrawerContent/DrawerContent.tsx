@@ -1,6 +1,6 @@
+import React, { useContext } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import { Drawer, Image } from "antd";
-import { useContext } from "react";
 import { MenuContext } from "../context";
 import drawerLogo from "./assets/drawerLogo.svg";
 import { DrawerAccordeon } from "./components/DrawerAccordeon/DrawerAccordeon";

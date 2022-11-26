@@ -1,0 +1,17 @@
+.trt-user-card {
+  height: 500px;
+}
+
+.trt-user-avatar,
+.trt-user-email {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trt-user-avatar {
+  & > svg {
+    vertical-align: top;
+    width: 75px;
+  }
+}

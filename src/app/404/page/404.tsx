@@ -1,14 +1,19 @@
+import React from "react";
 import { Button, Col, Image, Row, Typography } from "antd";
-import styles from "./noMatch.module.scss";
-import errorPageImage from "./assets/404.svg";
+import styles from "./404.module.scss";
+import errorPageImage from "../assets/404.svg";
 
-export const NoMatch = () => {
+export default function Component404() {
   return (
     <>
       <Row className={styles["trt-page-content"]}>
         <Image src={errorPageImage} alt="Page not found" preview={false} />
         <Col xs={24} sm={12}>
-          <Typography.Title level={1} className={styles["trt-error-text"]}>
+          <Typography.Title
+            level={1}
+            className={styles["trt-error-text"]}
+            style={{ color: "white" }}
+          >
             You didn't break the internet, but we can't find what you looking
             for.
           </Typography.Title>
@@ -28,4 +33,4 @@ export const NoMatch = () => {
       </Col>
     </>
   );
-};
+}

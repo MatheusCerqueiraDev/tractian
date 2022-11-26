@@ -1,12 +1,12 @@
 import { parseCookies } from "nookies";
-import { IAssetsProps } from "../../../common/interfaces/assets.interfaces";
-import { apiCore } from "../../../services/api";
+import { apiCore } from "../../services/api";
+import { IUserProps } from "../interfaces/users.interface";
 
-export const getAssets = async (): Promise<IAssetsProps[]> => {
+export const getUsers = async (): Promise<IUserProps[]> => {
   const token =
     parseCookies()[`tractian.token-${process.env.REACT_APP_COOKIE_DOMAIN}`];
 
-  const { data } = await apiCore.get("/assets", {
+  const { data } = await apiCore.get("/users", {
     headers: {
       "content-type": "application/json",
       Authorization: `Bearer ${token}`,

@@ -1,3 +1,4 @@
+import React from "react";
 import { NavLink } from "react-router-dom";
 import { Row } from "antd";
 import { NavSection } from "../../common/components/NavSection/NavSection";
@@ -17,9 +18,11 @@ export function SidebarNav() {
           <NavLink to="/users" className={styles["trt-nav-link"]}>
             <UserOutlined className={styles["trt-nav-icon"]} /> USERS
           </NavLink>
-          <NavLink to="/companys" className={styles["trt-nav-link"]}>
+        </NavSection>
+        <NavSection title="SUBSIDIRIES">
+          <NavLink to="/companies" className={styles["trt-nav-link"]}>
             <BankOutlined className={styles["trt-nav-icon"]} />
-            COMPANYS
+            COMPANIES
           </NavLink>
         </NavSection>
       </Row>

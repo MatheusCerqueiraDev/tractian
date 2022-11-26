@@ -1,10 +1,13 @@
+import React from "react";
 import "./styles/global.scss";
 import "antd/dist/antd.min.css";
+import DashboardPage from "./pages/dashboardPage";
+import UsersPage from "./pages/usersPage";
+import MotorsPage from "./pages/motorsPage";
+import Page404 from "./pages/404Page";
+import CompaniesPages from "./pages/companiesPage";
 import { Route, Routes } from "react-router-dom";
 import { TractionLayout } from "./layout/Layout";
-import { NoMatch } from "./pages/noMatch/noMatch";
-import { Dashboard } from "./pages/dashboard/dashboard";
-import { Motors } from "./app/motors/page/motors";
 
 //Using this "import "antd/dist/antd.min.css" insted "import "antd/dist/antd.css""
 //to solve this problem:
@@ -14,11 +17,11 @@ function App() {
   return (
     <Routes>
       <Route element={<TractionLayout />}>
-        <Route index element={<Dashboard />} />
-        <Route path="motors" element={<Motors />} />
-        <Route path="users" element={<Dashboard />} />
-        <Route path="companys" element={<Dashboard />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route index element={<DashboardPage />} />
+        <Route path="motors" element={<MotorsPage />} />
+        <Route path="users" element={<UsersPage />} />
+        <Route path="companies" element={<CompaniesPages />} />
+        <Route path="*" element={<Page404 />} />
       </Route>
     </Routes>
   );

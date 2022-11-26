@@ -1,6 +1,6 @@
+import React, { ReactNode, useRef } from "react";
 import { Carousel, CarouselProps } from "antd";
 import { CarouselRef } from "antd/lib/carousel";
-import { ReactNode, useRef } from "react";
 import styled from "styled-components";
 import _ from "lodash";
 import { WheelEventHandler } from "react";
@@ -32,7 +32,7 @@ const DotedCarouselWrapper = styled.div<{
 
     bottom: unset;
     height: 20px;
-    margin-top: 4px;
+    margin: 4px;
     &:hover {
       filter: brightness(1.2);
     }
@@ -40,7 +40,7 @@ const DotedCarouselWrapper = styled.div<{
     li,
     li.slick-active {
       align-content: center;
-      margin: 0;
+      margin-left: 0;
 
       button {
         background: ${({ highlightColor }) => highlightColor ?? "#ffffff"};

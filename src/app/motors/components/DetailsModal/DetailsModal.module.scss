@@ -1,12 +1,14 @@
+@import "../../../../styles/colors.module.scss";
+
 .trt-motor-details-modal {
   span {
-    color: #000000;
+    color: $black-100;
   }
 }
 
 .trt-footer-button {
   span {
-    color: #000000;
+    color: $black-100;
     font-size: 1rem; //16px
   }
 }
@@ -17,7 +19,7 @@
   }
 
   & path {
-    fill: #000000;
+    fill: $black-100;
   }
 }
 
@@ -41,6 +43,6 @@
   }
 
   & path {
-    fill: #000000;
+    fill: $black-100;
   }
 }

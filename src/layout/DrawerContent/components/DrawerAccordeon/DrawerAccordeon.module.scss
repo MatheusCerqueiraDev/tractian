@@ -2,20 +2,20 @@
 
 .trt-panel-title {
   span {
-    color: #000000;
+    color: $black-100;
     & > svg {
       font-size: 18px;
     }
   }
 
   & path {
-    fill: #000000;
+    fill: $black-100;
   }
 }
 
 .trt-panel-icon {
   & path {
-    fill: #000000;
+    fill: $black-100;
   }
 }
 
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
 
-  color: #000000;
+  color: $black-100;
 }
 
 .trt-nav-icon {
@@ -32,6 +32,6 @@
   }
 
   & path {
-    fill: #000000;
+    fill: $black-100;
   }
 }

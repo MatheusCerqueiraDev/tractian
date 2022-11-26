@@ -1,5 +1,5 @@
-import { Col, Row, Skeleton, SkeletonProps } from "antd";
 import React from "react";
+import { Col, Row, Skeleton, SkeletonProps } from "antd";
 
 export interface IItemConfig extends SkeletonProps {
   quantity?: number;

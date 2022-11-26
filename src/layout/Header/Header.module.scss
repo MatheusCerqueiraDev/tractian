@@ -6,10 +6,39 @@
   justify-content: space-between;
 
   background: transparent;
-  height: 5rem; //80px
+  height: 7rem; //112px
   width: 100%;
+}
 
-  position: sticky;
+.trt-header-carousel {
+  text-align: center;
+}
+
+.trt-asset-health-score {
+  color: $white-100;
+  font-size: 1.125rem; //18px
+  font-weight: 600;
+}
+
+.trt-status-rising,
+.trt-status-decreasing {
+  & > svg {
+    font-size: 22px;
+    margin-left: 2px;
+    vertical-align: text-bottom;
+  }
+}
+
+.trt-status-decreasing {
+  & path {
+    fill: $red-900;
+  }
+}
+
+.trt-status-rising {
+  & path {
+    fill: $green-600;
+  }
 }
 
 //PWA

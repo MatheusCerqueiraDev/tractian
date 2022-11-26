@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 interface IMenuContextProps {
   isMobile: boolean;
@@ -6,15 +6,15 @@ interface IMenuContextProps {
   setIsCollapsed(status: boolean): void;
 }
 
-interface IMenuproviderProps {
+interface IMenuProviderProps {
   children?: React.ReactNode;
 }
 
 export const MenuContext = createContext({} as IMenuContextProps);
 
-export const MenuProvider: React.FC<IMenuproviderProps> = ({
+export const MenuProvider: React.FC<IMenuProviderProps> = ({
   children,
-}: IMenuproviderProps) => {
+}: IMenuProviderProps) => {
   const [isMobile, setIsMobile] = useState(false);
   const [isCollapsed, setIsCollapsed] = useState(false);
 

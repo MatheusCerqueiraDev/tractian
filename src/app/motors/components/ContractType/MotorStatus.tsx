@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { Tag } from "../../../../common/components/Tag/Tag";
 import styles from "./MotorStatus.module.scss";
 

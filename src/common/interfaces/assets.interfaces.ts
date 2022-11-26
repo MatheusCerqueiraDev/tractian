@@ -25,3 +25,8 @@ export interface IAssetsProps {
   status: EUAssetStatus;
   unitId: number;
 }
+
+export interface IMotorCardProps {
+  motor: IAssetsProps;
+  loading: boolean;
+}

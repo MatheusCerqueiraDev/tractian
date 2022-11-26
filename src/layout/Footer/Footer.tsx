@@ -1,7 +1,9 @@
+import React from "react";
 import {
   FacebookOutlined,
   InstagramOutlined,
   LinkedinOutlined,
+  YoutubeOutlined,
 } from "@ant-design/icons";
 import { Col, Image, Layout, Row, Typography } from "antd";
 import { Link, NavLink } from "react-router-dom";
@@ -43,7 +45,7 @@ export const LayoutFooter = () => {
               </Col>
               <Col>
                 <a href="https://www.youtube.com/channel/UCmrRZOCxvMbDnR5haGfFe8w">
-                  <LinkedinOutlined className={styles["trt-social-icons"]} />
+                  <YoutubeOutlined className={styles["trt-social-icons"]} />
                 </a>
               </Col>
             </Row>
@@ -80,15 +82,24 @@ export const LayoutFooter = () => {
         </Col>
         <Col xs={8}>
           <NavSection title="CONTACT US">
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
+            <a
+              href="mailto= matheus.cerqueira1208@gmail.com"
+              className={styles["trt-nav-link"]}
+            >
+              Developers
+            </a>
+            <a
+              href="https://www.linkedin.com/company/tractian/"
+              className={styles["trt-nav-link"]}
+            >
+              Tractian
+            </a>
+            <a
+              href="https://www.linkedin.com/in/matheusdecarvalho1/"
+              className={styles["trt-nav-link"]}
+            >
+              Support
+            </a>
           </NavSection>
         </Col>
         <Col xs={24} style={{ margin: "20px 0 0" }}>

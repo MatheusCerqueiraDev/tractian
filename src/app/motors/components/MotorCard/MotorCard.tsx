@@ -1,23 +1,17 @@
-import { useState } from "react";
+import React, { useContext, useState } from "react";
 import styles from "./MotorCard.module.scss";
 import { Button, Col, Image, Row, Switch, Tooltip, Typography } from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import { Card } from "../../../../common/components/Card/Card";
 import {
   EUAssetStatus,
-  IAssetsProps,
+  IMotorCardProps,
 } from "../../../../common/interfaces/assets.interfaces";
 import { motorStatusDictionary } from "../ContractType/MotorStatus";
 import { DetailsModal } from "../DetailsModal/DetailsModal";
 
-interface IMotorInfosProps {
-  motor: IAssetsProps;
-}
-
-export const MotorCard = ({ motor }: IMotorInfosProps) => {
+export const MotorCard = ({ motor, loading }: IMotorCardProps) => {
   const [detailModalActive, setDetailModalActive] = useState(false);
-  const [isModalActive, setIsModalActive] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   return (
     <>

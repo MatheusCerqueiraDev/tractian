@@ -1,12 +1,14 @@
+import React, { useContext } from "react";
 import styles from "./Header.module.scss";
-import { useContext } from "react";
 import { MenuContext } from "../context";
-import { Button, Col, Image, Layout, Row } from "antd";
+import { Button, Col, Image, Layout, Tooltip, Typography } from "antd";
 import logo from "./assets/logoSvg.svg";
-import { MenuOutlined } from "@ant-design/icons";
+import { FallOutlined, MenuOutlined, RiseOutlined } from "@ant-design/icons";
 import { DotedCarousel } from "../../common/components/DotedCarousel/DotedCarousel";
 import { DrawerContent } from "../DrawerContent/DrawerContent";
 import { Link } from "react-router-dom";
+import { DataContext } from "../../common/context";
+import { removeDecimal } from "../../common/utils/textUtils";
 
 //Created assets folder in Header component folder to solve this:
 //Relative imports outside of src/ are not supported.
@@ -14,6 +16,7 @@ import { Link } from "react-router-dom";
 
 export function LayoutHeader() {
   const { setIsCollapsed, isMobile } = useContext(MenuContext);
+  const { assets } = useContext(DataContext);
 
   return (
     <Layout.Header
@@ -38,18 +41,39 @@ export function LayoutHeader() {
         </>
       ) : (
         <>
-          <Col>
+          {/* <Col>
             <Row justify="space-between"></Row>
-          </Col>
-          <Col xs={4}>
-            <div>
-              <DotedCarousel centerMode={true} autoplay>
-                <div style={{ textAlign: "center" }}>ab</div>
-                <div style={{ textAlign: "center" }}>cd</div>
-                <div style={{ textAlign: "center" }}>ef</div>
-                <div style={{ textAlign: "center" }}>gh</div>
-              </DotedCarousel>
-            </div>
+          </Col> */}
+          <Col xs={5}>
+            <DotedCarousel
+              centerMode={true}
+              autoplay
+              className={styles["trt-header-carousel"]}
+            >
+              {assets &&
+                assets.map((asset, i) => (
+                  <Tooltip
+                    title={asset.name}
+                    mouseEnterDelay={0}
+                    mouseLeaveDelay={0}
+                    placement="bottom"
+                    key={`trt-carousel-item-${i}`}
+                  >
+                    <Typography.Text
+                      className={styles["trt-asset-health-score"]}
+                    >
+                      {removeDecimal(asset.healthscore)}%
+                    </Typography.Text>
+                    {asset.healthscore >= 75 ? (
+                      <RiseOutlined className={styles["trt-status-rising"]} />
+                    ) : (
+                      <FallOutlined
+                        className={styles["trt-status-decreasing"]}
+                      />
+                    )}
+                  </Tooltip>
+                ))}
+            </DotedCarousel>
           </Col>
         </>
       )}
