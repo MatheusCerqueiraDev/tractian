@@ -26,18 +26,16 @@
   filter: brightness(0.7);
 }
 
-.trt-footer-columns {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  height: 100%;
+.trt-footer-title {
+  span {
+    color: $blue-100;
+    font-size: 1.125rem; //18px
+    font-weight: 600;
+  }
 }
 
-.trt-nav-link {
+.trt-footer-certificades {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  color: $white-100;
-  width: fit-content;
 }

@@ -19,6 +19,7 @@ import Highcharts from "highcharts";
 import Exporting from "highcharts/modules/exporting";
 import moment from "moment";
 import { toNumber } from "../../../../common/utils/textUtils";
+import { Chart } from "../../../../common/components/Chart/Chart";
 
 interface IDetailsModalProps {
   details: IAssetsProps;
@@ -78,7 +79,14 @@ export const DetailsModal = ({
       <Row gutter={[16, 16]}>
         <Col xs={24} className={styles["trt-chart-wrapper"]}>
           <Row gutter={[16, 16]}>
-            <Col xs={10}></Col>
+            <Col xs={24} md={10}>
+              <Chart
+                data={details.healthscore}
+                height={180}
+                color="#000000"
+                dataLabelYAxis={-30}
+              />
+            </Col>
             <Col xs={14}>
               <Row gutter={[16, 16]}>
                 <Col xs={24}>
@@ -130,16 +138,16 @@ export const DetailsModal = ({
                 GENERAL INFOS
               </Typography.Title>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <SettingOutlined
                   className={styles["trt-specifications-icon"]}
-                />{" "}
+                />
                 {details.model}
               </Typography.Title>
               <Typography.Text>Asset Model</Typography.Text>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <FileTextOutlined
                   className={styles["trt-specifications-icon"]}
@@ -148,7 +156,7 @@ export const DetailsModal = ({
               </Typography.Title>
               <Typography.Text>Sensors Model</Typography.Text>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <LineChartOutlined
                   className={styles["trt-specifications-icon"]}
@@ -157,14 +165,14 @@ export const DetailsModal = ({
               </Typography.Title>
               <Typography.Text>Asset Health</Typography.Text>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <InboxOutlined className={styles["trt-specifications-icon"]} />{" "}
                 {details.metrics.totalCollectsUptime}
               </Typography.Title>
               <Typography.Text>Total Pickups</Typography.Text>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <CalendarOutlined
                   className={styles["trt-specifications-icon"]}
@@ -173,7 +181,7 @@ export const DetailsModal = ({
               </Typography.Title>
               <Typography.Text>Last Update</Typography.Text>
             </Col>
-            <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+            <Col xs={12} md={8} className={styles["trt-motor-info"]}>
               <Typography.Title level={5} style={{ margin: 0 }}>
                 <DashboardOutlined
                   className={styles["trt-specifications-icon"]}

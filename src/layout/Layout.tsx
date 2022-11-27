@@ -19,7 +19,9 @@ export const TractionLayout: React.FunctionComponent = () => {
           </Layout.Sider>
         )}
 
-        <Layout.Content style={{ padding: "8px 16px", height: "100%" }}>
+        <Layout.Content
+          style={{ padding: "8px 16px", height: "100%", maxWidth: "100%" }}
+        >
           <Outlet />
         </Layout.Content>
 

@@ -34,6 +34,7 @@
     "@types/styled-components": "^5.1.26"
   },
   "scripts": {
+    "start": "node server.js",
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

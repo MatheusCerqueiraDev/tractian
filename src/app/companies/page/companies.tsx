@@ -1,5 +1,5 @@
-import { Col, Row } from "antd";
 import React, { useContext } from "react";
+import { Col, Row } from "antd";
 import { Card } from "../../../common/components/Card/Card";
 import { SkeletonBuilder } from "../../../common/components/SkeletonBuilder/SkeletonBuilder";
 import { DataContext } from "../../../common/context";

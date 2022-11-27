@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   FacebookOutlined,
   InstagramOutlined,
@@ -6,16 +6,20 @@ import {
   YoutubeOutlined,
 } from "@ant-design/icons";
 import { Col, Image, Layout, Row, Typography } from "antd";
-import { Link, NavLink } from "react-router-dom";
-import { NavSection } from "../../common/components/NavSection/NavSection";
+import { Link } from "react-router-dom";
 import logo from "./assets/logoSvg.svg";
 import styles from "./Footer.module.scss";
+import { MenuContext } from "../context";
+import { DefaultFooter } from "./components/DefaultFooter/DefaultFooter";
+import { FooterAccordeon } from "./components/FooterAccordeon/FooterAccordeon";
 
 export const LayoutFooter = () => {
+  const { isMobile } = useContext(MenuContext);
+
   return (
     <Layout.Footer className={styles["trt-footer-wrapper"]}>
       <Col xs={24}>
-        <Row justify="space-between">
+        <Row justify="space-between" gutter={[0, 24]}>
           <Col>
             <Link to="/">
               <Image
@@ -53,57 +57,49 @@ export const LayoutFooter = () => {
         </Row>
       </Col>
       <div className={styles["trt-footer-separator"]} />
-      <Row justify="space-around">
-        <Col xs={8} className={styles["trt-footer-columns"]}>
-          <NavSection title="ABOUT TRACTIAN">
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-          </NavSection>
-        </Col>
-        <Col xs={8}>
-          <NavSection title="CONTENT">
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-            <NavLink to="/motors" className={styles["trt-nav-link"]}>
-              Meet Tractian
-            </NavLink>
-          </NavSection>
-        </Col>
-        <Col xs={8}>
-          <NavSection title="CONTACT US">
-            <a
-              href="mailto= matheus.cerqueira1208@gmail.com"
-              className={styles["trt-nav-link"]}
-            >
-              Developers
-            </a>
-            <a
-              href="https://www.linkedin.com/company/tractian/"
-              className={styles["trt-nav-link"]}
-            >
-              Tractian
-            </a>
-            <a
-              href="https://www.linkedin.com/in/matheusdecarvalho1/"
-              className={styles["trt-nav-link"]}
-            >
-              Support
-            </a>
-          </NavSection>
-        </Col>
+      <Row>
+        {isMobile ? <FooterAccordeon /> : <DefaultFooter />}
         <Col xs={24} style={{ margin: "20px 0 0" }}>
-          <Typography.Link>Tractian LLC</Typography.Link>
+          <Row justify="space-between" align="middle">
+            {!isMobile && (
+              <>
+                <Col xs={24} className={styles["trt-footer-title"]}>
+                  <Typography.Text>RECOGNITION</Typography.Text>
+                </Col>
+                <Col className={styles["trt-footer-certificades"]} xs={12}>
+                  <Image
+                    preview={false}
+                    width={70}
+                    src="https://imgix.tractian.com/website/components/footer/general/capterra-badge-2022.png?auto=format&fit=max&w=256"
+                  />
+                  <Image
+                    preview={false}
+                    width={70}
+                    src="https://imgix.tractian.com/website/components/footer/general/getAppWhite.png?auto=format&fit=max&w=256"
+                  />
+                  <Image
+                    preview={false}
+                    width={70}
+                    src="https://imgix.tractian.com/website/components/footer/general/logo-front-runners-2022.png?auto=format&fit=max&w=256"
+                  />
+                  <Image
+                    preview={false}
+                    width={70}
+                    src="https://imgix.tractian.com/website/components/footer/general/logo-gptw.png?auto=format&fit=max&w=256"
+                  />
+                  <Image
+                    preview={false}
+                    width={70}
+                    src="https://imgix.tractian.com/website/components/footer/general/logo-sup-endeavor.png?auto=format&fit=max&w=256"
+                  />
+                </Col>
+              </>
+            )}
+
+            <Col style={{ alignSelf: "center" }}>
+              <Typography.Link>Tractian LLC</Typography.Link>
+            </Col>
+          </Row>
         </Col>
       </Row>
     </Layout.Footer>

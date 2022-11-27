@@ -2,9 +2,7 @@ import React, { useContext } from "react";
 import {
   AppstoreOutlined,
   BankOutlined,
-  SettingOutlined,
   TeamOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
 import { Col, Collapse, Row, Typography } from "antd";
 import { NavLink } from "react-router-dom";
@@ -24,7 +22,7 @@ export const DrawerAccordeon = () => {
 
   return (
     <>
-      <Collapse ghost>
+      <Collapse ghost accordion>
         <Panel
           header={
             <>
@@ -40,7 +38,7 @@ export const DrawerAccordeon = () => {
             onClick={closeDrawer}
             className={styles["trt-nav-link"]}
           >
-            <SettingOutlined className={styles["trt-nav-icon"]} /> MOTORS
+            MOTORS
           </NavLink>
         </Panel>
         <Panel
@@ -53,25 +51,33 @@ export const DrawerAccordeon = () => {
           key="2"
           className={styles["trt-panel-title"]}
         >
-          <Row
-            gutter={[0, 16]}
-            style={{ display: "flex", flexDirection: "column" }}
-          >
+          <Row gutter={[0, 16]}>
             <NavLink
-              to="/motors"
+              to="/users"
               onClick={closeDrawer}
               className={styles["trt-nav-link"]}
             >
-              <UserOutlined className={styles["trt-nav-icon"]} /> USERS
-            </NavLink>
-            <NavLink
-              to="/motors"
-              onClick={closeDrawer}
-              className={styles["trt-nav-link"]}
-            >
-              <BankOutlined className={styles["trt-nav-icon"]} /> COMPANYS
+              USERS
             </NavLink>
           </Row>
+        </Panel>
+        <Panel
+          header={
+            <>
+              <BankOutlined className={styles["trt-nav-icon"]} />
+              <Typography.Text>SUBSIDIRIES</Typography.Text>
+            </>
+          }
+          key="3"
+          className={styles["trt-panel-title"]}
+        >
+          <NavLink
+            to="/companies"
+            onClick={closeDrawer}
+            className={styles["trt-nav-link"]}
+          >
+            COMPANYS
+          </NavLink>
         </Panel>
       </Collapse>
       <Col xs={24} style={{ position: "absolute", bottom: 10 }}>

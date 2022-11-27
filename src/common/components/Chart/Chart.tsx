@@ -13,9 +13,17 @@ interface DataProps {
   data: number;
   height?: number;
   title?: string;
+  color?: string;
+  dataLabelYAxis?: number;
 }
 
-export const Chart = ({ data, height = 250, title }: DataProps) => {
+export const Chart = ({
+  data,
+  height = 250,
+  title,
+  color = "#FFFFFF",
+  dataLabelYAxis = -12,
+}: DataProps) => {
   const options = {
     chart: {
       backgroundColor: null,
@@ -45,12 +53,11 @@ export const Chart = ({ data, height = 250, title }: DataProps) => {
     series: [
       {
         data: [data],
-        color: "",
         dataLabels: {
           format:
-            '<div style="text-align:center; color: "#000000">' +
-            '<span style="font-size:25px">{y} %</span><br/>' +
-            '<span style="font-size:12px;opacity:0.4">Health Status</span>' +
+            '<div style="text-align:center">' +
+            `<span style="font-size:25px; color:${color}">{y} %</span><br/>` +
+            `<span style="font-size:12px;opacity:0.4; color:${color} ">Health Status</span>` +
             "</div>",
         },
         tooltip: {
@@ -72,13 +79,13 @@ export const Chart = ({ data, height = 250, title }: DataProps) => {
       tickWidth: 0,
       minorTickInterval: null,
       tickAmount: 2,
-      labels: { distance: 25, style: { color: "#FFFFFF", fontSize: 18 } },
+      labels: { distance: 25, style: { color: color, fontSize: 18 } },
     },
 
     plotOptions: {
       solidgauge: {
         dataLabels: {
-          y: -12,
+          y: dataLabelYAxis,
           borderWidth: 0,
           useHTML: true,
         },

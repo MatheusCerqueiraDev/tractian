@@ -7,6 +7,7 @@ interface NavSectionProps {
   title?: string;
   subTitle?: string;
   separator?: boolean;
+  icon?: ReactNode;
 }
 
 export const NavSection = ({
@@ -14,11 +15,12 @@ export const NavSection = ({
   children,
   subTitle,
   separator,
+  icon,
 }: NavSectionProps) => {
   return (
     <Col xs={24} className={styles["nav-section-wrapper"]}>
       <Typography.Text className={styles["nav-section-title"]}>
-        {title}
+        {icon} {title}
       </Typography.Text>
       <Typography.Text className={styles["nav-section-subTitle"]}>
         {subTitle}

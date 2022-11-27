@@ -29,7 +29,7 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
       setAssets(loadedAssets);
     } catch (error: any) {
       showNotificationError({
-        message: "Houve um impasse ao carregar ativos.",
+        message: "We had a trouble to load motors. Try in a few minutes",
         description: error?.response?.data?.message,
       });
     }
@@ -43,8 +43,7 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
       setCompanies(loadedCompanies);
     } catch (error: any) {
       showNotificationError({
-        message:
-          "We had a trouble to load companies. Try in the next few minutes",
+        message: "We had a trouble to load companies. Try in a few minutes",
         description: error?.response?.data?.message,
       });
     }
@@ -58,7 +57,7 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
       setUsers(loadedUsers);
     } catch (error: any) {
       showNotificationError({
-        message: "We had a trouble to load users. Try in the next few minutes",
+        message: "We had a trouble to load users. Try in a few minutes",
         description: error?.response?.data?.message,
       });
     }

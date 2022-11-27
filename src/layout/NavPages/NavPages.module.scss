@@ -5,10 +5,8 @@
 }
 
 .trt-nav-link {
-  display: flex;
-  align-items: center;
-
   color: $white-100;
+  font-weight: 600;
   width: fit-content;
 }
 
@@ -19,6 +17,6 @@
   }
 
   & path {
-    fill: $white-100;
+    fill: $blue-100;
   }
 }

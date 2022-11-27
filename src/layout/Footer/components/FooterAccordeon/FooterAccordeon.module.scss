@@ -1,0 +1,35 @@
+@import "../../../../styles/colors.module.scss";
+
+.trt-panel-title {
+  span {
+    color: $blue-100;
+    font-size: 1.125rem; //18px
+    font-weight: 600;
+    & > svg {
+      font-size: 22px;
+    }
+  }
+
+  & path {
+    fill: $blue-100;
+  }
+}
+
+.trt-nav-link {
+  display: flex;
+  align-items: flex-start;
+
+  color: $white-100;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.trt-accordion-footer {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  & > a {
+    margin-left: 32px;
+  }
+}
