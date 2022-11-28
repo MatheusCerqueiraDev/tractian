@@ -1,29 +1,6 @@
 # Getting started with Tractian Assets dashboard
 
-This project was created with React Js.
-Once we know this I have tried to implemented SSR with Babel for this project
-cause of my eye problem at 19/11 I dind't ha the perfect time to implement it to production (started it yesterday 27/11).
-But i came really close to be implemented it is commented in gitignore but the files are:
-
-- /tractian/.babelrc
-- /tractian/src/services/server.tsx
-- src/services/useDataSSR.ts
-- line 14 of public/index.html
-
-I have implemented a few concepts:
-
-- Using StyleSheet from styled components so we can pass our style through server rendering
-  -- /server.tsx line 20 & 57 and line 14 of public/index.html
-- Caveats redenring on server
-- Data loding context( when load data from server and when to load frfom client)
-- Rendering API data in server
-- SSR enhacing with context
-- Routing with SSR
-
-You will see some React imports in the top of each index file
-it is so because we need this for workflow behind the scens with Babel SSR.
-
-I have another example for SSR in React [here](https://github.com/MatheusCerqueiraDev/React-SSR)...
+This project was created with React Js and Typescript.
 
 ## Learn More
 
@@ -46,7 +23,7 @@ This project has a few technologies and concepts for his engineering:
 - KISS
 - Learn Once - Write anywhere
 - PWA
-- SSR
+- SSR (unsuccessfully but I've tried with Babel.. learned [here.](https://www.linkedin.com/learning/react-software-architecture/routing-with-server-side-rendering?autoplay=true&seekTo=154))
 - Data loading Context
 - WebSockets
 
@@ -60,6 +37,7 @@ So we can concat Ant Design classes with our own class...
 I've created common componets based on Ant design components You can find them in:
 
 - /src/common/components
+  Table dind't go so weel because of SCSS compile...
 
 The web app has his default layout and no URL match page:
 
@@ -71,18 +49,7 @@ You can find the layout Context and the application context in:
 - src/layout/context
 - src/common/context
 
-Not all but a few components has comments:
-
-- App.tsx
-- /src/services/server.ts
-- /common/components/DotedCarousel/DotedCarousel.tsx
-- /common/components/Modal/Modal.tsx
-- /layout/DrawerContent/components/DrawerAccordeon/DrawerAccordeon.tsx
-- /layout/Header/Header.module.scss
-- /layout/Header/Header.tsx
-- /styles/colors.module.scss
-
-I have the full faith that the project could be better with I had a better study time, Highchart seems a little deprecated and is more verbose than Ant "native" charts [@antv/g2plot](https://g2.antv.antgroup.com) all other was very simple to handle nothing hard at all.
+I have the full faith that the project could be better with I had a better study time, Highchart seems really deprecated and is more verbose than Ant "native" charts [@antv/g2plot](https://g2.antv.antgroup.com) all other was very simple to handle nothing hard at all.
 With the non persistence API is a little more harder to create something visually like
 visual feedbacks or even for state, prop or management actions, I am really familiar with those actions using forms or click all types of callback, async and step actions.
 
