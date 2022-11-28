@@ -1,0 +1,22 @@
+@import "../../../../styles/colors.module.scss";
+
+.trt-modal-company-icon {
+  & > svg {
+    font-size: 18px;
+  }
+
+  & path {
+    fill: $black-100;
+  }
+}
+
+.trt-footer-button {
+  span {
+    color: $black-100;
+    font-size: 1rem; //16px
+  }
+}
+
+.trt-form-input {
+  border-radius: 25px;
+}

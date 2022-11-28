@@ -1,0 +1,19 @@
+@import "../../../../../styles/colors.module.scss";
+
+.trt-table-wrapper {
+  min-width: 100%;
+
+  td {
+    color: #000000;
+  }
+
+  button {
+    & > svg {
+      font-size: 22px;
+      font-weight: 600;
+    }
+    & path {
+      fill: $blue-200;
+    }
+  }
+}

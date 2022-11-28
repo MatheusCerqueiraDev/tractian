@@ -33,7 +33,7 @@ export const Chart = ({
 
     title: {
       text: title ?? undefined,
-      style: { color: "#FFFFFF" },
+      style: { color: color },
     },
 
     pane: {

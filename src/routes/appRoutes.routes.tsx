@@ -1,4 +1,4 @@
-import { AuthRoutes } from "./auth.routes";
+import { AuthRoutes } from "./authenticate.routes";
 import { useContext } from "react";
 import { AuthContext } from "../common/context/auth";
 import { UserRoutes } from "./user.routes";

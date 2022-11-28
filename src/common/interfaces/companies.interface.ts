@@ -3,6 +3,6 @@ export interface ICompaniesProps {
   name: string;
 }
 
-export interface ICompanyCardProps {
-  company: ICompaniesProps;
+export interface ICompanyTableProps {
+  companies: ICompaniesProps[];
 }

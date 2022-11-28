@@ -5,9 +5,11 @@ import {
   IContextProps,
   IDataProviderProps,
 } from "../../interfaces/data.interface";
+import { IUnitsProps } from "../../interfaces/units.interface";
 import { IUserProps } from "../../interfaces/users.interface";
 import { getAssets } from "../../services/assets.service";
 import { getCompanies } from "../../services/companies.service";
+import { getUnits } from "../../services/units.service";
 import { getUsers } from "../../services/users.service";
 import { showNotificationError } from "../../utils/notifications.utils";
 
@@ -19,6 +21,7 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
   const [assets, setAssets] = useState<IAssetsProps[]>([]);
   const [users, setUsers] = useState<IUserProps[]>([]);
   const [companies, setCompanies] = useState<ICompaniesProps[]>([]);
+  const [units, setUnits] = useState<IUnitsProps[]>([]);
   const [loading, setLoading] = useState(false);
 
   const loadAssets = useCallback(async () => {
@@ -63,10 +66,25 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
     setLoading(false);
   }, []);
 
+  const loadUnits = useCallback(async () => {
+    setLoading(true);
+    try {
+      const loadedUsers = await getUnits();
+      setUnits(loadedUsers);
+    } catch (error: any) {
+      showNotificationError({
+        message: "We had a trouble to load units. Try in a few minutes",
+        description: error?.response?.data?.message,
+      });
+    }
+    setLoading(false);
+  }, []);
+
   useEffect(() => {
     loadAssets();
     loadCompanies();
     loadUsers();
+    loadUnits();
   }, []);
 
   return (
@@ -78,6 +96,8 @@ export const DataProvider: React.FC<IDataProviderProps> = ({
         setUsers,
         companies,
         setCompanies,
+        units,
+        setUnits,
         loading,
         setLoading,
       }}

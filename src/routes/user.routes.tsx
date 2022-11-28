@@ -4,6 +4,7 @@ import Page404 from "../pages/404Page";
 import CompaniesPages from "../pages/companiesPage";
 import DashboardPage from "../pages/dashboardPage";
 import MotorsPage from "../pages/motorsPage";
+import UnitsPage from "../pages/unitsPage";
 import UsersPage from "../pages/usersPage";
 
 export const UserRoutes = () => {
@@ -21,6 +22,9 @@ export const UserRoutes = () => {
         </Route>
         <Route element={<TractionLayout>{<Outlet />}</TractionLayout>}>
           <Route path="companies" element={<CompaniesPages />} />
+        </Route>
+        <Route element={<TractionLayout>{<Outlet />}</TractionLayout>}>
+          <Route path="units" element={<UnitsPage />} />
         </Route>
         <Route element={<TractionLayout>{<Outlet />}</TractionLayout>}>
           <Route path="*" element={<Page404 />} />

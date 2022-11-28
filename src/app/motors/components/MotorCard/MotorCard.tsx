@@ -7,18 +7,23 @@ import {
   EUAssetStatus,
   IMotorCardProps,
 } from "../../../../common/interfaces/assets.interfaces";
-import { motorStatusDictionary } from "../ContractType/MotorStatus";
+import { motorStatusDictionary } from "../MotorStatus/MotorStatus";
 import { DetailsModal } from "../DetailsModal/DetailsModal";
 
 export const MotorCard = ({ motor, loading }: IMotorCardProps) => {
   const [detailModalActive, setDetailModalActive] = useState(false);
+
+  function handleCloseModal() {
+    setDetailModalActive(false);
+  }
+  //preventing re redering
 
   return (
     <>
       <DetailsModal
         details={motor}
         loading={loading}
-        onCancel={() => setDetailModalActive(false)}
+        onCancel={handleCloseModal}
         visible={detailModalActive}
       />
       <Card
@@ -56,25 +61,6 @@ export const MotorCard = ({ motor, loading }: IMotorCardProps) => {
                   {motor?.name}
                 </Typography.Title>
               </Col>
-              <Tooltip
-                title={`ADMINS can turn ${
-                  motor.status === EUAssetStatus.inDowntime ? "on" : "off"
-                }`}
-                mouseEnterDelay={0}
-                mouseLeaveDelay={0}
-                placement="bottom"
-              >
-                <Col flex="none" className={styles["trt-motor-switch"]}>
-                  <Switch
-                    className={styles["trt-motor-inner-switch"]}
-                    checked={
-                      motor.status === EUAssetStatus.inDowntime ? false : true
-                    }
-                    loading={loading}
-                    disabled
-                  />
-                </Col>
-              </Tooltip>
             </Row>
           </Col>
           <Col xs={24}>

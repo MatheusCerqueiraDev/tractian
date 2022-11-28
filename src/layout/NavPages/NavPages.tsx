@@ -50,6 +50,9 @@ export function SidebarNav() {
           <NavLink to="/companies" className={styles["trt-nav-link"]}>
             COMPANIES
           </NavLink>
+          <NavLink to="/units" className={styles["trt-nav-link"]}>
+            UNITS
+          </NavLink>
         </NavSection>
       </Row>
     </div>

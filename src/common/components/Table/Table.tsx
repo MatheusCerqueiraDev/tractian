@@ -4,6 +4,7 @@ import React from "react";
 import styled from "styled-components";
 import { getHighestContrastTextColor } from "../../utils/color-utils";
 import { FlipTableRow, IFlipTableRowProps } from "./components/FlipTableRow";
+import styles from "./Table.module.scss";
 
 export type TableProps<T> = AntTableProps<T> & {
   highlightColor?: string;
@@ -129,7 +130,7 @@ const Table = ({
   return (
     <StyledWrapper
       highlightColor={highlightColor}
-      className="trt-table-wrapper"
+      className={styles["trt-table-wrapper"]}
     >
       <AntTable
         {...props}

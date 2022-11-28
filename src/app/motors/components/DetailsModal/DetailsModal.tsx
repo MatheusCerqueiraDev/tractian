@@ -95,7 +95,7 @@ export const DetailsModal = ({
                   </Typography.Title>
                 </Col>
                 {details.specifications.maxTemp && (
-                  <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+                  <Col xs={12} md={8} className={styles["trt-motor-info"]}>
                     <Typography.Title level={5} style={{ margin: 0 }}>
                       <FireOutlined
                         className={styles["trt-specifications-icon"]}
@@ -106,7 +106,7 @@ export const DetailsModal = ({
                   </Col>
                 )}
                 {details.specifications.power && (
-                  <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+                  <Col xs={12} md={8} className={styles["trt-motor-info"]}>
                     <Typography.Title level={5} style={{ margin: 0 }}>
                       <ThunderboltOutlined
                         className={styles["trt-specifications-icon"]}
@@ -117,7 +117,7 @@ export const DetailsModal = ({
                   </Col>
                 )}
                 {details.specifications.rpm && (
-                  <Col xs={24} md={8} className={styles["trt-motor-info"]}>
+                  <Col xs={12} md={8} className={styles["trt-motor-info"]}>
                     <Typography.Title level={5} style={{ margin: 0 }}>
                       <RedoOutlined
                         className={styles["trt-specifications-icon"]}
