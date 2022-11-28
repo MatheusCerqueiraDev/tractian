@@ -2,6 +2,8 @@
 
 This project was created with React Js and Typescript.
 
+Project URL: https://dashboard-tractian.herokuapp.com/
+
 ## Learn More
 
 This project has a few technologies and concepts for his engineering:
@@ -9,6 +11,7 @@ This project has a few technologies and concepts for his engineering:
 - React Js 18.02
 - Typescript
 - React Router DOM v6
+- Heroku
 - SASS
 - Ant Design
 - Axios
