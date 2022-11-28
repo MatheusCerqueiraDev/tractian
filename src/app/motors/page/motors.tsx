@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Col, Row } from "antd";
 import { Card } from "../../../common/components/Card/Card";
 import { SkeletonBuilder } from "../../../common/components/SkeletonBuilder/SkeletonBuilder";
-import { DataContext } from "../../../common/context";
 import { MotorCard } from "../components/MotorCard/MotorCard";
 import styles from "./motors.module.scss";
-import { spanForTwoInline } from "../../../common/utils/PWASpans";
+import { spanForThreeInline } from "../../../common/utils/PWASpans";
+import { DataContext } from "../../../common/context/data";
 
 export const Motors = () => {
   const { assets, loading } = useContext(DataContext);
@@ -16,7 +16,7 @@ export const Motors = () => {
         ? Array(6)
             .fill(0)
             .map((_, i) => (
-              <Col {...spanForTwoInline}>
+              <Col {...spanForThreeInline}>
                 <Card shadow size="small" key={`trt-motor-card-skeleton${i}`}>
                   <SkeletonBuilder
                     items={[
@@ -41,7 +41,7 @@ export const Motors = () => {
             ))
         : assets?.map((asset) => {
             return (
-              <Col key={asset.id} {...spanForTwoInline}>
+              <Col key={asset.id} {...spanForThreeInline}>
                 <MotorCard motor={asset} loading={loading} />
               </Col>
             );

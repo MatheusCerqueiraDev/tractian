@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { ReactNode, useContext } from "react";
 import { Layout } from "antd";
 import { LayoutHeader } from "./Header/Header";
 import { Outlet } from "react-router-dom";
@@ -7,7 +7,11 @@ import { SidebarNav } from "./NavPages/NavPages";
 import { MenuContext } from "./context";
 import { LayoutFooter } from "./Footer/Footer";
 
-export const TractionLayout: React.FunctionComponent = () => {
+export interface TractionLayoutProps {
+  children: ReactNode;
+}
+
+export const TractionLayout = ({ children }: TractionLayoutProps) => {
   const { isMobile } = useContext(MenuContext);
   return (
     <>
@@ -22,7 +26,7 @@ export const TractionLayout: React.FunctionComponent = () => {
         <Layout.Content
           style={{ padding: "8px 16px", height: "100%", maxWidth: "100%" }}
         >
-          <Outlet />
+          {children}
         </Layout.Content>
 
         <LayoutFooter />

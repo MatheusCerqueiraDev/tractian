@@ -2,6 +2,10 @@ import { IAssetsProps } from "./assets.interfaces";
 import { ICompaniesProps } from "./companies.interface";
 import { IUserProps } from "./users.interface";
 
+export interface IDataProviderProps {
+  children?: React.ReactNode;
+}
+
 export interface IContextProps {
   assets: IAssetsProps[];
   setAssets: (assets: IAssetsProps[]) => void;

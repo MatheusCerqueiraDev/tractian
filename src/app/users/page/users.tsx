@@ -2,7 +2,7 @@ import { Col, Row } from "antd";
 import React, { useContext } from "react";
 import { Card } from "../../../common/components/Card/Card";
 import { SkeletonBuilder } from "../../../common/components/SkeletonBuilder/SkeletonBuilder";
-import { DataContext } from "../../../common/context";
+import { DataContext } from "../../../common/context/data";
 import { spanForThreeInline } from "../../../common/utils/PWASpans";
 import { UserCard } from "../components/UserCard/UserCard";
 import styles from "./users.module.scss";

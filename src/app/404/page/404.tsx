@@ -1,13 +1,12 @@
 import React from "react";
 import { Button, Col, Image, Row, Typography } from "antd";
 import styles from "./404.module.scss";
-import errorPageImage from "../assets/404.svg";
 
 export default function Component404() {
   return (
     <>
       <Row className={styles["trt-page-content"]}>
-        <Image src={errorPageImage} alt="Page not found" preview={false} />
+        <Image src="/assets/404.svg" alt="Page not found" preview={false} />
         <Col xs={24} sm={12}>
           <Typography.Title
             level={1}

@@ -1,0 +1,36 @@
+@import "../../../styles/colors.module.scss";
+
+.trt-login-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    157deg,
+    rgba(32, 64, 139, 1) 0%,
+    rgba(31, 64, 138, 1) 35%,
+    rgba(43, 111, 232, 1) 100%
+  );
+  height: 100vh;
+
+  .trt-login-img-logo {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-bottom: 46px;
+  }
+
+  .trt-login-form-input-email {
+    border-radius: 25px;
+  }
+
+  .trt-login-form-input {
+    border-radius: 25px;
+  }
+
+  .trt-login-form-prefix {
+    color: gray;
+    margin-right: 5px;
+  }
+}

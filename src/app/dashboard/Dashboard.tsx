@@ -3,8 +3,8 @@ import { Col, Row } from "antd";
 import { Card } from "../../common/components/Card/Card";
 import { Chart } from "../../common/components/Chart/Chart";
 import { SkeletonBuilder } from "../../common/components/SkeletonBuilder/SkeletonBuilder";
-import { DataContext } from "../../common/context";
 import { spanForThreeInline } from "../../common/utils/PWASpans";
+import { DataContext } from "../../common/context/data";
 
 export const Dashboard = () => {
   const { assets, loading } = useContext(DataContext);

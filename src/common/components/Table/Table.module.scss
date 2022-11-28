@@ -1,0 +1,163 @@
+.trt-table-wrapper {
+  .custom-antd-table {
+    background: #ffffff;
+    border-radius: 8px;
+
+    .ant-table,
+    .ant-table > .ant-table-title,
+    .ant-table > .ant-table-container,
+    .ant-table > .ant-table-container > .ant-table-content,
+    .ant-table table,
+    .ant-table-thead {
+      border-radius: 8px;
+    }
+
+    .ant-table table {
+      padding: 1.5px;
+      & > thead {
+        & > tr {
+          border-radius: 8px 8px 0 0;
+          & > th {
+            background-color: rgb(255, 255, 255);
+            border-bottom: none;
+            margin-bottom: 1px;
+            white-space: nowrap;
+          }
+          & ::before {
+            display: none;
+          }
+          & > th:first-child {
+            border-top-left-radius: 8px;
+          }
+          & > th:last-child {
+            border-top-right-radius: 8px;
+          }
+        }
+      }
+
+      & > .ant-table-tbody {
+        border-radius: 8px;
+        & > tr {
+          border-radius: 8px;
+          & ::before {
+            display: none;
+          }
+          & > td {
+            border-bottom: none;
+          }
+        }
+        & > tr:first-child td:first-child,
+        .ant-table-measure-row + tr td:first-child {
+          border-top-left-radius: 8px;
+        }
+        & > tr:first-child td:last-child,
+        .ant-table-measure-row + tr td:last-of-type,
+        & > tr:first-child .trt-flip-table-row-hover-content div,
+        .ant-table-measure-row + tr .trt-flip-table-row-hover-content div {
+          border-top-right-radius: 8px;
+        }
+        & > tr:last-child td:first-child {
+          border-bottom-left-radius: 8px;
+        }
+        & > tr:last-child td:last-of-type,
+        & > tr:last-child .trt-flip-table-row-hover-content div {
+          border-bottom-right-radius: 8px;
+        }
+      }
+    }
+
+    .ant-table-pagination.ant-pagination {
+      margin: 6px 1px;
+      align-items: baseline;
+    }
+    .ant-pagination-item {
+      box-sizing: border-box;
+      border-radius: 8px;
+      border-width: 0;
+      * {
+        box-shadow: none;
+      }
+    }
+    .ant-pagination-item:not(.ant-pagination-item-active)
+      > .trt-button-wrapper
+      .ant-btn {
+      background: white;
+    }
+
+    .ant-pagination-options {
+      margin-left: 8px;
+      & > .ant-select-single .ant-select-selector {
+        border: 1px solid transparent;
+        border-radius: 16px;
+        background: linear-gradient(to right, white, white),
+          radial-gradient(
+            100% 807.76% at 0% 0%,
+            rgba(250, 69, 21, 0.8) 0%,
+            rgba(203, 26, 153, 0.8) 32.34%,
+            rgba(78, 18, 140, 0.8) 100%
+          );
+        background-clip: padding-box, border-box;
+        background-origin: padding-box, border-box;
+      }
+      & .ant-select-single .ant-select-selector .ant-select-selection-item {
+        background-image: radial-gradient(
+          100% 807.76% at 0% 0%,
+          rgba(250, 69, 21, 0.8) 0%,
+          rgba(203, 26, 153, 0.8) 32.34%,
+          rgba(78, 18, 140, 0.8) 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      & .ant-select-arrow {
+        & path {
+          fill: #7842a3;
+          d: path(
+            "M 840.4 300 H 183.6 c -19.7 0 -30.7 20.8 -18.5 35 l 328.4 380.8 c 9.4 10.9 27.5 10.9 37 0 L 858.9 335 c 12.2 -14.2 1.2 -35 -18.5 -35 Z"
+          );
+        }
+      }
+    }
+
+    .page-link {
+      padding: 12px 24px;
+    }
+  }
+
+  .trt-flip-table-row-main-content {
+    position: relative;
+    &:hover > .trt-flip-table-row-hover-content {
+      opacity: 1;
+    }
+    & td {
+      position: relative;
+    }
+    & > tr:first-child td:nth-last-child(2),
+    .ant-table-measure-row + tr td:nth-last-child(2) {
+      border-top-right-radius: 8px;
+    }
+    & > tr:last-child td:nth-last-child(2) {
+      border-bottom-right-radius: 8px;
+    }
+  }
+
+  .trt-flip-table-row-hover-content {
+    position: sticky;
+    padding: 0;
+    right: 0;
+    width: 0;
+    opacity: 0;
+    z-index: 10;
+    transition: ease-in 0.1s;
+    padding: 0;
+    & > .ant-row {
+      position: absolute;
+      right: 0;
+      height: 100%;
+      gap: 8px;
+      padding-right: 16px;
+      padding-left: 96px;
+    }
+  }
+}

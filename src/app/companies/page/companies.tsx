@@ -2,10 +2,10 @@ import React, { useContext } from "react";
 import { Col, Row } from "antd";
 import { Card } from "../../../common/components/Card/Card";
 import { SkeletonBuilder } from "../../../common/components/SkeletonBuilder/SkeletonBuilder";
-import { DataContext } from "../../../common/context";
 import { spanForThreeInline } from "../../../common/utils/PWASpans";
 import { CompaniesCard } from "../components/CardCompanies";
 import styles from "./companies.module.scss";
+import { DataContext } from "../../../common/context/data";
 
 export const Companies = () => {
   const { companies, loading } = useContext(DataContext);

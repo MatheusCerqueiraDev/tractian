@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import styles from "./MotorCard.module.scss";
 import { Button, Col, Image, Row, Switch, Tooltip, Typography } from "antd";
 import { EyeOutlined } from "@ant-design/icons";

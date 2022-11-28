@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { CloseOutlined } from "@ant-design/icons";
 import { Drawer, Image } from "antd";
 import { MenuContext } from "../context";
-import drawerLogo from "./assets/drawerLogo.svg";
 import { DrawerAccordeon } from "./components/DrawerAccordeon/DrawerAccordeon";
 import styles from "./DrawerContent.module.scss";
 
@@ -13,7 +12,7 @@ export const DrawerContent = () => {
     <Drawer
       closeIcon={
         <Image
-          src={drawerLogo}
+          src="/assets/blueLogo.svg"
           preview={false}
           width={200}
           height="fit-content"

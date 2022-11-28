@@ -7,7 +7,6 @@ import {
 } from "@ant-design/icons";
 import { Col, Image, Layout, Row, Typography } from "antd";
 import { Link } from "react-router-dom";
-import logo from "./assets/logoSvg.svg";
 import styles from "./Footer.module.scss";
 import { MenuContext } from "../context";
 import { DefaultFooter } from "./components/DefaultFooter/DefaultFooter";
@@ -20,13 +19,13 @@ export const LayoutFooter = () => {
     <Layout.Footer className={styles["trt-footer-wrapper"]}>
       <Col xs={24}>
         <Row justify="space-between" gutter={[0, 24]}>
-          <Col>
+          <Col xs={5}>
             <Link to="/">
               <Image
-                src={logo}
+                src="/assets/logo.svg"
                 preview={false}
-                width={200}
-                height="fit-content"
+                width="100%"
+                height="100%"
               />
             </Link>
           </Col>

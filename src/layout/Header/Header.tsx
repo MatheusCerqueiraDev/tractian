@@ -2,17 +2,12 @@ import React, { useContext } from "react";
 import styles from "./Header.module.scss";
 import { MenuContext } from "../context";
 import { Button, Col, Image, Layout, Tooltip, Typography } from "antd";
-import logo from "./assets/logoSvg.svg";
 import { FallOutlined, MenuOutlined, RiseOutlined } from "@ant-design/icons";
 import { DotedCarousel } from "../../common/components/DotedCarousel/DotedCarousel";
 import { DrawerContent } from "../DrawerContent/DrawerContent";
 import { Link } from "react-router-dom";
-import { DataContext } from "../../common/context";
 import { removeDecimal } from "../../common/utils/textUtils";
-
-//Created assets folder in Header component folder to solve this:
-//Relative imports outside of src/ are not supported.
-//You can either move it inside src/, or add a symlink to it from project's node_modules/.*
+import { DataContext } from "../../common/context/data";
 
 export function LayoutHeader() {
   const { setIsCollapsed, isMobile } = useContext(MenuContext);
@@ -23,9 +18,14 @@ export function LayoutHeader() {
       className={styles["trt-header"]}
       style={{ padding: "0 20px" }}
     >
-      <Col>
+      <Col xs={5}>
         <Link to="/">
-          <Image src={logo} preview={false} width={200} height="fit-content" />
+          <Image
+            src="/assets/logo.svg"
+            preview={false}
+            width="100%"
+            height="100%"
+          />
         </Link>
       </Col>
       {isMobile ? (

@@ -1,16 +1,15 @@
 import React, { createContext, useCallback, useEffect, useState } from "react";
-import { IAssetsProps } from "../interfaces/assets.interfaces";
-import { ICompaniesProps } from "../interfaces/companies.interface";
-import { IContextProps } from "../interfaces/context.interface";
-import { IUserProps } from "../interfaces/users.interface";
-import { getAssets } from "../services/assets.service";
-import { getCompanies } from "../services/companies.service";
-import { getUsers } from "../services/users.service";
-import { showNotificationError } from "../utils/notifications.utils";
-
-interface IDataProviderProps {
-  children?: React.ReactNode;
-}
+import { IAssetsProps } from "../../interfaces/assets.interfaces";
+import { ICompaniesProps } from "../../interfaces/companies.interface";
+import {
+  IContextProps,
+  IDataProviderProps,
+} from "../../interfaces/data.interface";
+import { IUserProps } from "../../interfaces/users.interface";
+import { getAssets } from "../../services/assets.service";
+import { getCompanies } from "../../services/companies.service";
+import { getUsers } from "../../services/users.service";
+import { showNotificationError } from "../../utils/notifications.utils";
 
 export const DataContext = createContext({} as IContextProps);
 
