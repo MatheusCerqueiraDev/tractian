@@ -78,6 +78,13 @@ export const DrawerAccordeon = () => {
           >
             COMPANYS
           </NavLink>
+          <NavLink
+            to="/units"
+            onClick={closeDrawer}
+            className={styles["trt-nav-link"]}
+          >
+            UNITS
+          </NavLink>
         </Panel>
       </Collapse>
       <Col xs={24} style={{ position: "absolute", bottom: 10 }}>
